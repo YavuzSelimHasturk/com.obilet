@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>com.obilet</td>
+        <td>1</td>
+      <td>11 Mar 2023, 21:38</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.alt_sekmeden_ara_butonuna_tiklar_anasayfanin_acildigini_dogrular()</td>
+              <td>1</td>
+              <td class="duration" data-value="1245996600">1.245</td>
+              <td class="duration" data-value="1245996600">1.245</td>
+              <td class="duration" data-value="1245996600">1.245</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.alt_sekmelerden_hesabim_sekmesine_tiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="643999300">0.643</td>
+              <td class="duration" data-value="643999300">0.643</td>
+              <td class="duration" data-value="643999300">0.643</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.checkoutSayfasininAcildiginiKontrolEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="19485336600">19.485</td>
+              <td class="duration" data-value="19485336600">19.485</td>
+              <td class="duration" data-value="19485336600">19.485</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.gidilecekIlVeyaIlceyiVeGidisDonusTarihiniSecer()</td>
+              <td>1</td>
+              <td class="duration" data-value="10264997600">10.264</td>
+              <td class="duration" data-value="10264997600">10.264</td>
+              <td class="duration" data-value="10264997600">10.264</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.giris_yap_ekrani_acildigini_kontrol_eder()</td>
+              <td>1</td>
+              <td class="duration" data-value="811140200">0.811</td>
+              <td class="duration" data-value="811140200">0.811</td>
+              <td class="duration" data-value="811140200">0.811</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.hemen_uye_ol_textine_tiklar_mail_ve_password_alanlarini_doldurarak_uye_ol_butonuna_tiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="9191212900">9.191</td>
+              <td class="duration" data-value="9191212900">9.191</td>
+              <td class="duration" data-value="9191212900">9.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.hesabim_sayfasini_acar_sayfanin_dogru_sekilde_acildigini_kontrol_eder()</td>
+              <td>1</td>
+              <td class="duration" data-value="2162003300">2.162</td>
+              <td class="duration" data-value="2162003300">2.162</td>
+              <td class="duration" data-value="2162003300">2.162</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.kullanici_obilet_uygulamasini_acar()</td>
+              <td>2</td>
+              <td class="duration" data-value="8690570650">8.690</td>
+              <td class="duration" data-value="8690570650">17.378</td>
+              <td class="duration" data-value="17381141300">17.381</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.otelAraButonunaTiklarVeOtellerinListelendiginiKontrolEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="9733409400">9.733</td>
+              <td class="duration" data-value="9733409400">9.733</td>
+              <td class="duration" data-value="9733409400">9.733</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.otelDetaySayfasindanBirOdaSecer()</td>
+              <td>1</td>
+              <td class="duration" data-value="25101859900">25.101</td>
+              <td class="duration" data-value="25101859900">25.101</td>
+              <td class="duration" data-value="25101859900">25.101</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.otelTabIneTiklarVeOtelRezervasyonuAramaSayfasininAcildiginiGorur()</td>
+              <td>1</td>
+              <td class="duration" data-value="1398536600">1.398</td>
+              <td class="duration" data-value="1398536600">1.398</td>
+              <td class="duration" data-value="1398536600">1.398</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.otellerdenHerhangiBiriniSecer()</td>
+              <td>1</td>
+              <td class="duration" data-value="2428533100">2.428</td>
+              <td class="duration" data-value="2428533100">2.428</td>
+              <td class="duration" data-value="2428533100">2.428</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.uye_girisi_yapin_butonuna_tiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="987000700">0.987</td>
+              <td class="duration" data-value="987000700">0.987</td>
+              <td class="duration" data-value="987000700">0.987</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.obiletStepDefinition.uygulamanin_dogru_sekilde_acildigini_kontrol_eder()</td>
+              <td>2</td>
+              <td class="duration" data-value="2237500350">2.237</td>
+              <td class="duration" data-value="2237500350">4.347</td>
+              <td class="duration" data-value="4475000700">4.475</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>16</td>
+            <td class="duration">6.581</td>
+            <td class="duration">25.101</td>
+            <td class="duration">1:45.310</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
